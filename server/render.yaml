@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: quickai-api
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: CLERK_SECRET_KEY
+        scope: run
+      - key: CLOUDINARY_NAME
+        scope: run
+      - key: CLOUDINARY_API_KEY
+        scope: run
+      - key: CLOUDINARY_API_SECRET
+        scope: run
+      - key: OPENAI_API_KEY
+        scope: run
+      - key: DATABASE_URL
+        scope: run
